@@ -1,9 +1,0 @@
-# 本地私有配置，禁止提交
-config.php
-# 用户IP定位缓存，避免上传访客隐私
-cache/
-# 系统/IDE垃圾文件
-.DS_Store
-*.tmp
-*.bak
-*.log
