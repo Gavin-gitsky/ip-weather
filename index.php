@@ -238,12 +238,15 @@ class App
     {
         // 方案1：输出GIF（推荐，兼容微信/QQ/老旧浏览器）
         header("Content-type: image/gif");
+        // 强制下载/保存时文件名
+        header('Content-Disposition: inline; filename="weather.gif"');
         imagegif($this->drawIm);
-
+    
         // 方案2：输出WebP（体积更小，取消注释启用）
         // header("Content-type: image/webp");
+        // header('Content-Disposition: inline; filename="weather.webp"');
         // imagewebp($this->drawIm, null, 85);
-
+    
         imagedestroy($this->drawIm);
     }
 
